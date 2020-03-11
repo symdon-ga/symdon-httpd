@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  testing:
+    build: .
+    volumes:
+      - ./conf:/etc/httpd/conf
+    expose:
+      - "443"
+      - "80"
+    ports:
+      - "443:443"
+      - "80:80"
